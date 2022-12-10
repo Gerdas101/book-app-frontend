@@ -1,0 +1,394 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(213, 251, 251);
+}
+
+/* ======   TYPOGRAPHY   ====== */
+
+/* logo */
+.logo-title h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+.logo-title p {
+  margin: -0.5em 0 0 0;
+  padding: 0;
+  letter-spacing: 0.5em;
+}
+
+/* ======   LAYOUT   ====== */
+.container {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 675px) {
+  .container {
+    width: 90%;
+  }
+  .container-flex {
+    flex-direction: column;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+/* header */
+header {
+  background-color: rgb(169, 223, 223);
+
+  height: max-content;
+  padding: 2em 0;
+  text-align: center;
+}
+
+/* logo */
+.logo {
+  display: flex;
+}
+
+.logo .logo-title {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: left;
+  width: max-content;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+
+  margin-right: 0.5em;
+
+  object-fit: contain;
+}
+
+/* navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  align-self: center;
+  font-size: 1rem;
+  margin-left: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-logout {
+  border: 0;
+  background: none;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+nav a:hover,
+nav .btn-logout:hover {
+  width: fit-content;
+  color: cadetblue;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 675px) {
+  .logo {
+    width: max-content;
+    align-self: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 0.5em 0;
+  }
+}
+
+/* main */
+main {
+  min-height: 700px;
+}
+
+/* container-search */
+.container-search {
+  margin: 0 3em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.textbox-search {
+  border: 0;
+  display: block;
+  margin: 2rem 0;
+  padding: 0 0.3em;
+
+  font-size: 1.5rem;
+
+  width: 70%;
+  height: 50px;
+}
+.textbox-search:focus,
+.textbox-search:focus {
+  outline: none;
+}
+
+.btn-search {
+  border: 0;
+  display: block;
+  margin: 2rem 0;
+
+  background-color: rgb(65, 255, 160);
+  width: 15%;
+}
+
+@media (max-width: 700px) {
+  .container-search {
+    flex-direction: column;
+    align-items: center;
+  }
+  .textbox-search {
+    margin-bottom: 0.5em;
+    width: 100%;
+  }
+  .btn-search {
+    margin-top: 0;
+    height: 50px;
+    width: 50%;
+  }
+}
+
+/* container-book-list
+  container-user-list */
+
+.container-list {
+  padding: 0;
+  margin-bottom: 1em;
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.widget {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.widget .col-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em;
+  width: 15%;
+}
+
+.widget .col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.3em;
+  width: 80%;
+}
+
+.widget img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+/* widget user */
+.widget-user {
+  background-color: rgb(169, 223, 223);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-info {
+  width: 100%;
+  background-color: white;
+  padding: 0.2em;
+}
+
+.widget-user p {
+  margin: 0;
+}
+
+.widget-user p {
+  font-size: 1.2em;
+}
+.widget-user span {
+  font-weight: bold;
+  margin: 0 0.5em;
+}
+
+/* widget book */
+.widget-book {
+  background-color: white;
+  border: 5px solid rgb(169, 223, 223);
+
+  max-height: 800px;
+}
+
+.widget-book .book-title {
+  margin: 0 0 0.4em 0;
+  width: 100%;
+}
+
+.widget-book .book-author {
+  font-size: 1em;
+  font-style: italic;
+  color: grey;
+}
+
+.widget-book .book-realise-date {
+  color: rgb(73, 73, 73);
+  font-size: 0.8em;
+}
+
+.widget-book .book-description {
+  text-indent: 30px;
+  font-size: smaller;
+  color: rgb(39, 39, 39);
+}
+
+.book-additional-info {
+  margin-top: 0.5em;
+  border: 3px solid rgb(169, 223, 223);
+  width: 100%;
+}
+
+.book-additional-info label {
+  color: rgb(24, 24, 24);
+}
+
+.book-additional-info p {
+  margin: 0 0 0.3em 0;
+  font-size: smaller;
+  color: rgb(39, 39, 39);
+}
+
+.widget button,
+.widget button,
+.widget button {
+  border: 0;
+  display: block;
+  height: 30px;
+}
+#btn-change-id {
+  visibility: hidden;
+}
+.widget .btn-edit,
+.widget .btn-add {
+  background-color: rgb(65, 255, 160);
+  width: 20%;
+}
+.widget-book .btn-delete {
+  margin-top: 0.4em;
+  background-color: rgb(255, 130, 108);
+}
+
+.widget .btn-view {
+  margin-top: 0.4em;
+}
+
+.widget-book .book-author,
+.widget-book .book-realise-date,
+.widget-book .book-description {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+/* Profile */
+
+.container-profile-info {
+  border: 5px solid rgb(169, 223, 223);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
+.container-profile-info .col-1 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.container-profile-info img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container-profile-info .col-2 {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.container-profile-info .profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  border-bottom: 1px dotted black;
+}
+
+.profile-info-row label,
+.profile-info-row p,
+.profile-info-row button {
+  align-self: center;
+}
+
+.profile-info-row label {
+  width: 25%;
+  font-weight: bolder;
+}
+
+.profile-info-row p {
+  width: 40%;
+}
+
+.profile-info-row button {
+  width: 15%;
+  border: 0;
+  background-color: white;
+}
+
+/* footer */
+footer {
+  background-color: rgb(169, 223, 223);
+
+  height: max-content;
+  padding: 2em 0;
+  text-align: center;
+}
