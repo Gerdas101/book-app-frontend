@@ -14,9 +14,10 @@ export default function Navbar() {
         <nav>
           <ul>
             <CustomLink to='/'>HOME</CustomLink>
-            <CustomLink to='/books'>BOOKS</CustomLink>
             <CustomLink to='/my-books'>MY BOOKS</CustomLink>
             <CustomLink to='/profile'>PROFILE</CustomLink>
+            <CustomLink to='/Login'>LOGIN</CustomLink>
+            <CustomLink to='/Register'>REGISTER</CustomLink>
           </ul>
         </nav>
       </div>
